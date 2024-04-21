@@ -165,7 +165,7 @@ public function exportPdf()
             ->orWhere('tipe','like','%'.$this->querys.'%')
             ->orderBy('notrx', 'asc')->paginate(5);
         }else{
-            $data = ModelsTransaksi::orderBy('notrx', 'asc')->paginate(5);
+            $data = ModelsTransaksi::with('kamar','pelanggan')->orderBy('notrx', 'asc')->paginate(5);
         }
         return view('livewire.transaksi',compact('data'))
         ->title('Transaksi')

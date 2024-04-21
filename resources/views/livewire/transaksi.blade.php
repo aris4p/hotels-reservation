@@ -76,8 +76,8 @@
                                     <tr>
                                         <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>{{ $data->firstItem() + $key}}</strong></td>
                                         <td>{{ $value->notrx }}</td>
-                                        <td>{{ $value->pelanggan_id }}</span></td>
-                                        <td>{{ $value->kamar_id }}</span></td>
+                                        <td>{{ $value->pelanggan->nama }}</span></td>
+                                        <td>{{ $value->kamar->nama }}</span></td>
                                         <td>{{ $value->harga }}</span></td>
                                         <td>{{ $value->jumlah }}</span></td>
                                         <td>{{ $value->tglCheckin }}</span></td>
